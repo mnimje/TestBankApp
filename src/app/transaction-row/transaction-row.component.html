@@ -1,3 +1,15 @@
-<p>
-  transaction-row works!
-</p>
+<div class="transactionRow container">
+  <ul>
+    <li *ngFor="let items of Items;">
+      <p ngClass="colorCode" [ngStyle]="{'background-color': items.categoryCode}"></p>
+      <span class="text padding10">{{items.transactionDate | date }}</span>
+      <span class="merchantLogo padding10">
+        <img class="merchantLogo" src={{items.merchantLogo}} alt="merchantLogo"/>
+      </span>
+      <span class="merchantTitle">
+        {{items.merchant}}
+      </span>
+      <span class="text" style="float: right;vertical-align: middle">{{items.amount | currency:'USD':'symbol':'2.2-2'}}</span>
+    </li>
+  </ul>
+</div>
