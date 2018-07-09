@@ -89,3 +89,9 @@ table {
 	padding: 0.35rem;
 	cursor: pointer;
 }
+
+.headerColor{
+	background: #1e90ff;
+	padding: 12px;
+	color:white;
+}
